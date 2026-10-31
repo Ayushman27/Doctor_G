@@ -1,0 +1,10 @@
+{
+  "model_version": "1.0.0",
+  "training_random_state": 42,
+  "primary_model": "Tuned XGBoost",
+  "risk_classes": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ]
+}

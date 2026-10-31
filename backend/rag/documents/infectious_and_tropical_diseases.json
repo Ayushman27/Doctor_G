@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Malaria Clinical Presentation & Symptoms",
+    "source": "WHO Guidelines for Malaria",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/malaria",
+    "disease": "Malaria",
+    "section": "Clinical Signs & Diagnosis",
+    "source_type": "medical_reference",
+    "content": "Malaria is a life-threatening disease caused by Plasmodium parasites transmitted through infected female Anopheles mosquitoes. Symptoms usually start 10 to 15 days after mosquito bite and include cyclical paroxysms of high fever, severe shaking chills, profuse sweating, headache, nausea, and muscular pain. The classic fever cycle (chills followed by high fever then sweating every 48-72 hours) and severe sweating are key diagnostic hallmarks of malaria."
+  },
+  {
+    "title": "Dengue Fever Symptoms and Warning Signs",
+    "source": "CDC Dengue Clinical Overview",
+    "url": "https://www.cdc.gov/dengue/symptoms/index.html",
+    "disease": "Dengue",
+    "section": "Symptoms and Red Flags",
+    "source_type": "medical_reference",
+    "content": "Dengue is transmitted by Aedes mosquitoes. Symptoms include high fever (40C/104F) accompanied by severe headache, retro-orbital pain (pain behind the eyes), joint and muscle aches ('breakbone fever'), skin rash, and minor bleeding (nose or gum bleed). Warning signs of severe dengue include severe abdominal pain, persistent vomiting, mucosal bleeding, and severe fatigue."
+  },
+  {
+    "title": "Typhoid Fever Symptoms and Progression",
+    "source": "WHO Typhoid Fact Sheet",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/typhoid",
+    "disease": "Typhoid",
+    "section": "Clinical Presentation",
+    "source_type": "medical_reference",
+    "content": "Typhoid fever is a life-threatening infection caused by Salmonella Typhi, spread through contaminated food or water. Symptoms include prolonged step-ladder fever rising gradually, severe headache, abdominal pain, constipation or diarrhea, rose-colored spots on the chest, and lethargy. Bradycardia (slow heart rate relative to fever) and prolonged gastrointestinal discomfort help distinguish typhoid from viral malaria or flu."
+  },
+  {
+    "title": "Chickenpox Clinical Features and Rash",
+    "source": "CDC Chickenpox Clinical Details",
+    "url": "https://www.cdc.gov/chickenpox/about/symptoms.html",
+    "disease": "Chicken Pox",
+    "section": "Rash & Features",
+    "source_type": "medical_reference",
+    "content": "Chickenpox is caused by the varicella-zoster virus. The signature symptom is an itchy rash that turns into fluid-filled blisters (vesicles) that eventually scab over. Other symptoms include fever, fatigue, loss of appetite, and headache. The progression of papules to vesicles and crusting across the face, chest, and back distinguishes chickenpox from impetigo or drug allergy rashes."
+  }
+]

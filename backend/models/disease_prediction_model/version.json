@@ -1,0 +1,7 @@
+{
+  "model_name": "symptom_to_disease_classifier",
+  "version": "1.0.0",
+  "framework": "scikit-learn",
+  "selected_model": "Logistic Regression",
+  "random_state": 42
+}

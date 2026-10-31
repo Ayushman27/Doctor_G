@@ -1,0 +1,10 @@
+{
+  "selected_model": "Logistic Regression",
+  "top_1_accuracy": 1.0,
+  "top_3_accuracy": 1.0,
+  "top_5_accuracy": 1.0,
+  "number_of_features": 133,
+  "number_of_classes": 41,
+  "training_samples": 4920,
+  "testing_samples": 42
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Diabetes Mellitus Clinical Presentation",
+    "source": "ADA (American Diabetes Association) / CDC",
+    "url": "https://www.cdc.gov/diabetes/basics/symptoms.html",
+    "disease": "Diabetes",
+    "section": "Classic Symptoms",
+    "source_type": "medical_reference",
+    "content": "Diabetes is a chronic metabolic condition where the body cannot properly process blood glucose. Classic symptoms include polyuria (excessive urination), polydipsia (excessive thirst), polyphagia (extreme hunger), unexplained weight loss, fatigue, blurry vision, and slow-healing sores. The triad of excessive thirst, frequent urination, and unexplained weight loss distinguishes diabetes from other metabolic conditions."
+  },
+  {
+    "title": "Hypertension Symptoms and Diagnosis",
+    "source": "AHA (American Heart Association)",
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure",
+    "disease": "Hypertension",
+    "section": "Clinical Presentation",
+    "source_type": "medical_reference",
+    "content": "Hypertension (high blood pressure) is often termed a 'silent killer' because it usually has no warning signs or symptoms. However, extremely high blood pressure (hypertensive crisis) can cause occipital headaches, shortness of breath, dizziness, chest tightness, and nosebleeds. Persistent morning headaches and elevated blood pressure readings confirm the condition."
+  },
+  {
+    "title": "Heart Attack Symptoms and Red Flags",
+    "source": "NIH MedlinePlus Heart Attack",
+    "url": "https://medlineplus.gov/heartattack.html",
+    "disease": "Heart Attack",
+    "section": "Emergency Warning Signs",
+    "source_type": "medical_reference",
+    "content": "A heart attack (myocardial infarction) occurs when blood flow to a part of the heart muscle is severely blocked. Common symptoms include pressure, tightness, pain, squeezing or aching sensation in the chest or arms that may spread to the neck, jaw, or back, shortness of breath, cold sweats, lightheadedness, and nausea. Severe chest tightness with radiation to the left arm or jaw requires IMMEDIATE emergency evaluation."
+  },
+  {
+    "title": "Hypoglycemia Clinical Symptoms",
+    "source": "Endocrine Society / MedlinePlus",
+    "url": "https://medlineplus.gov/hypoglycemia.html",
+    "disease": "Hypoglycemia",
+    "section": "Acute Manifestations",
+    "source_type": "medical_reference",
+    "content": "Hypoglycemia occurs when blood sugar levels drop below normal (typically <70 mg/dL). Symptoms include sudden onset of shakiness, sweating, anxiety, rapid heartbeat (palpitations), dizziness, confusion, irritability, and extreme hunger. Symptoms resolve rapidly following oral carbohydrate ingestion."
+  },
+  {
+    "title": "Migraine Headache Characteristics",
+    "source": "NINDS / NIH Headache Information",
+    "url": "https://www.ninds.nih.gov/health-information/disorders/migraine",
+    "disease": "Migraine",
+    "section": "Clinical Features",
+    "source_type": "medical_reference",
+    "content": "Migraine is a neurological disorder causing severe throbbing headache, typically on one side of the head. Symptoms include pulsating head pain, extreme sensitivity to light (photophobia) and sound (phonophobia), nausea, vomiting, and visual aura (flashing lights, zigzag lines). Throbbing unilateral pain worsening with physical activity distinguishes migraine from tension headache."
+  }
+]

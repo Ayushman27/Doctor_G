@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Gastroesophageal Reflux Disease (GERD) Presentation",
+    "source": "NIH MedlinePlus GERD Overview",
+    "url": "https://medlineplus.gov/gerd.html",
+    "disease": "GERD",
+    "section": "Symptoms & Reflux Features",
+    "source_type": "medical_reference",
+    "content": "GERD occurs when stomach acid repeatedly flows back into the tube connecting your mouth and stomach (esophagus). Primary symptoms include heartburn (burning sensation in the chest typically worse after eating or lying down), acid regurgitation, chest discomfort, difficulty swallowing (dysphagia), and chronic cough or throat clearing. Symptoms often worsen after heavy meals or lying flat."
+  },
+  {
+    "title": "Gastroenteritis Clinical Presentation",
+    "source": "CDC Viral Gastroenteritis",
+    "url": "https://www.cdc.gov/norovirus/about/symptoms.html",
+    "disease": "Gastroenteritis",
+    "section": "Acute Symptoms",
+    "source_type": "medical_reference",
+    "content": "Gastroenteritis is an inflammation of the lining of the intestines caused by a virus, bacteria, or parasites. Common symptoms include watery diarrhea, abdominal cramps, nausea, vomiting, low-grade fever, and dehydration. Sudden onset of severe vomiting and watery diarrhea distinguishes gastroenteritis from GERD or peptic ulcer disease."
+  },
+  {
+    "title": "Peptic Ulcer Disease Symptoms and Complications",
+    "source": "Merck Manual Professional Version",
+    "url": "https://www.merckmanuals.com/professional/gastrointestinal-disorders/peptic-ulcer-disease",
+    "disease": "Peptic Ulcer Disease",
+    "section": "Clinical Manifestations",
+    "source_type": "medical_reference",
+    "content": "Peptic ulcers are open sores that develop on the inside lining of your stomach and the upper portion of your small intestine. The most common symptom is burning stomach pain, which is often relieved by eating food or taking antacids, but returns 1 to 3 hours later. Other symptoms include bloating, belching, fatty food intolerance, and heartburn."
+  },
+  {
+    "title": "Jaundice and Hepatitis Clinical Overview",
+    "source": "WHO Hepatitis Fact Sheet",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+    "disease": "Jaundice / Hepatitis",
+    "section": "Hepatic Features",
+    "source_type": "medical_reference",
+    "content": "Hepatitis (types A, B, C, D, E) causes liver inflammation. Symptoms include jaundice (yellowing of the skin and whites of the eyes), dark urine, pale or clay-colored stools, fatigue, abdominal pain in the right upper quadrant, loss of appetite, and nausea. Jaundice accompanied by dark urine is a clear hallmark of hepatic involvement distinguishing viral hepatitis or cholestasis from gastroenteritis."
+  }
+]

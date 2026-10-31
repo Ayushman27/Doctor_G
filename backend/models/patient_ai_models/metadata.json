@@ -1,0 +1,16 @@
+{
+  "project": "Intelligent Patient Stratification & Drug Candidate Recommendation System",
+  "version": "1.0.0",
+  "patient_dataset": "UCI Diabetes 130-US Hospitals for Years 1999-2008",
+  "patient_dataset_id": 296,
+  "drug_dataset": "UCI Drug Reviews Druglib.com",
+  "drug_dataset_id": 461,
+  "primary_model": "XGBoost",
+  "secondary_model": "Random Forest",
+  "risk_mapping": {
+    "0": "LOW",
+    "1": "MEDIUM",
+    "2": "HIGH"
+  },
+  "warning": "Research/portfolio decision-support prototype. Drug candidates are based on historical review data and are not medical prescriptions."
+}

@@ -1,0 +1,16 @@
+{
+  "random_forest": {
+    "Model": "Random Forest - Validation",
+    "Accuracy": 0.5631182443498198,
+    "Precision": 0.5486363865570312,
+    "Recall": 0.5631182443498198,
+    "F1": 0.554675464815271
+  },
+  "tuned_xgboost": {
+    "Model": "Tuned XGBoost - Test",
+    "Accuracy": 0.5879462823452342,
+    "Precision": 0.5496309248710266,
+    "Recall": 0.5879462823452342,
+    "F1": 0.5406840971473056
+  }
+}

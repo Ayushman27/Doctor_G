@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Pneumonia Diagnosis and Symptoms",
+    "source": "MedlinePlus / NIH",
+    "url": "https://medlineplus.gov/pneumonia.html",
+    "disease": "Pneumonia",
+    "section": "Clinical Presentation & Differential Diagnosis",
+    "source_type": "medical_reference",
+    "content": "Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus. Symptoms include high fever, severe cough with phlegm or pus, shortness of breath (dyspnea), sharp chest pain when breathing or coughing, fatigue, and chills. Shortness of breath and pleuritic chest pain are key features distinguishing pneumonia from mild upper respiratory infections like the common cold or mild bronchitis."
+  },
+  {
+    "title": "Influenza Clinical Presentation & Key Features",
+    "source": "CDC (Centers for Disease Control and Prevention)",
+    "url": "https://www.cdc.gov/flu/symptoms/index.fr.htm",
+    "disease": "Influenza",
+    "section": "Overview & Symptoms",
+    "source_type": "medical_reference",
+    "content": "Influenza (flu) is a contagious respiratory illness caused by influenza viruses. Symptoms come on suddenly and include abrupt high fever, chills, severe muscle or body aches, headaches, fatigue, dry cough, and sore throat. Unlike bronchial asthma or pneumonia, flu symptoms typically onset rapidly within hours and feature prominent systemic muscle aches and extreme exhaustion."
+  },
+  {
+    "title": "Bronchial Asthma Management and Distinguishing Features",
+    "source": "WHO (World Health Organization)",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/asthma",
+    "disease": "Bronchial Asthma",
+    "section": "Clinical Presentation",
+    "source_type": "medical_reference",
+    "content": "Asthma is a major noncommunicable disease characterized by recurrent attacks of breathlessness and wheezing, which vary in severity and frequency from person to person. Symptoms include episodic wheezing, chest tightness, shortness of breath, and coughing, particularly at night or early morning. Unlike pneumonia or infectious bronchitis, asthma flares are often triggered by allergens, exercise, or cold air, and rarely present with high infectious fever unless complicated by secondary infection."
+  },
+  {
+    "title": "Common Cold Overview and Differential Features",
+    "source": "NIH / NLM MedlinePlus",
+    "url": "https://medlineplus.gov/commoncold.html",
+    "disease": "Common Cold",
+    "section": "Symptoms and Comparison",
+    "source_type": "medical_reference",
+    "content": "The common cold is a viral infection of your nose and throat. Symptoms include runny nose, nasal congestion, sneezing, mild sore throat, and low-grade fever or no fever. Colds progress gradually over 1 to 3 days and usually do not cause severe shortness of breath, high fever, or severe systemic body pain. High fever above 38.5C (101.3F) strongly points toward influenza or pneumonia rather than a simple common cold."
+  },
+  {
+    "title": "Tuberculosis Symptoms and Clinical Evaluation",
+    "source": "CDC Tuberculosis Guidelines",
+    "url": "https://www.cdc.gov/tb/topic/basics/default.htm",
+    "disease": "Tuberculosis",
+    "section": "Clinical Symptoms",
+    "source_type": "medical_reference",
+    "content": "Tuberculosis (TB) is caused by Mycobacterium tuberculosis. Symptoms of active pulmonary TB include a persistent cough lasting 3 weeks or longer, chest pain, coughing up blood or sputum (hemoptysis), night sweats, unexplained weight loss, fever, and fatigue. The presence of prolonged coughing lasting weeks accompanied by night sweats and weight loss strongly distinguishes TB from acute respiratory infections like flu or common cold."
+  }
+]

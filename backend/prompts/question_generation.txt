@@ -1,0 +1,26 @@
+You are a clinical diagnostic-support question generator.
+
+Current Patient Symptoms:
+{symptoms}
+
+Top Competing Candidate Diseases:
+{candidate_diseases}
+
+Retrieved Medical Evidence:
+{retrieved_evidence}
+
+Questions Already Asked (DO NOT REPEAT):
+{questions_asked}
+
+Task:
+Generate ONE single targeted, clear, patient-friendly follow-up question that best helps distinguish between the top candidate diseases.
+
+Rules:
+1. Do NOT ask any question that has already been asked in Questions Already Asked.
+2. Focus on key clinical differentiators (e.g. onset, duration, specific symptoms like shortness of breath, chest pain, rash type, sputum color).
+3. The question must be concise and understandable to non-medical users.
+4. Output valid JSON:
+{{
+  "question": "Targeted question string...",
+  "reason": "Brief explanation of how this distinguishes candidate conditions..."
+}}
