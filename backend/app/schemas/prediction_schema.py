@@ -5,7 +5,7 @@ Pydantic schemas for prediction, drug recommendation, and clinical guidance resp
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 
 # ------------------------------------------------------------------ #
@@ -19,6 +19,8 @@ class RiskProbabilities(BaseModel):
 
 
 class PredictionResult(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     risk_class: int = Field(..., description="Predicted risk class index (0=LOW, 1=MEDIUM, 2=HIGH)")
     risk_label: str = Field(..., description="Human-readable risk label")
     probabilities: RiskProbabilities
@@ -88,6 +90,8 @@ class AnalysisResponse(BaseModel):
 # ------------------------------------------------------------------ #
 
 class HealthResponse(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     status: str = "healthy"
     model_loaded: bool
     model_version: str
@@ -122,6 +126,8 @@ class DiseasePrediction(BaseModel):
 
 
 class DiseasePredictionResponse(BaseModel):
+    model_config = ConfigDict(protected_namespaces=())
+
     matched_symptoms: List[str] = Field(..., description="Symptoms recognized by the model")
     unmatched_symptoms: List[str] = Field(..., description="Symptoms not recognized by the model")
     top_prediction: DiseasePrediction = Field(..., description="Primary disease prediction")

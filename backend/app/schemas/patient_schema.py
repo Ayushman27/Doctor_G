@@ -11,7 +11,7 @@ Field names MUST match the original feature names used during training.
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, ConfigDict
 
 
 # ------------------------------------------------------------------ #
@@ -71,7 +71,7 @@ class PatientData(BaseModel):
     insulin: Optional[str] = Field("No", description="Insulin dosage change")
 
     # Combination medications
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True, protected_namespaces=())
 
     # Using aliases to handle hyphenated field names
     glyburide_metformin: Optional[str] = Field("No", alias="glyburide-metformin", description="Glyburide-Metformin change")

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import logging
 from typing import List, Dict, Any, Optional
+import numpy as np
 
 logger = logging.getLogger(__name__)
 

@@ -9,6 +9,7 @@ than creating separate loading mechanisms.
 
 from __future__ import annotations
 
+import gc
 import json
 import logging
 from pathlib import Path
@@ -34,7 +35,7 @@ class ModelRegistry:
     # ------------------------------------------------------------------ #
     preprocessor: Any = None                   # sklearn ColumnTransformer
     xgboost_model: Optional[xgb.Booster] = None
-    random_forest_model: Any = None            # sklearn RandomForestClassifier
+    random_forest_model: Any = None            # sklearn RandomForestClassifier (optional)
     drug_summary: Optional[pd.DataFrame] = None
     disease_model: Any = None                  # sklearn LogisticRegression
     disease_label_encoder: Any = None          # sklearn LabelEncoder
@@ -94,7 +95,7 @@ class ModelRegistry:
             model_dir / "preprocessor.pkl", "preprocessor"
         )
 
-        # ---- XGBoost model ----------------------------------------------
+        # ---- XGBoost model (Primary Inference Model) --------------------
         xgboost_path = model_dir / "xgboost.json"
         cls._require_file(xgboost_path, "xgboost.json")
         booster = xgb.Booster()
@@ -102,10 +103,17 @@ class ModelRegistry:
         cls.xgboost_model = booster
         logger.info("XGBoost model loaded (rounds=%d).", booster.num_boosted_rounds())
 
-        # ---- Random Forest (secondary model) ----------------------------
-        cls.random_forest_model = cls._load_joblib(
-            model_dir / "random_forest.pkl", "random_forest"
-        )
+        # ---- Random Forest (Secondary/Benchmark Model) -------------------
+        # Skipped by default to fit within 512MB RAM cloud tiers (e.g. Render free tier).
+        # XGBoost is the active inference model used by /patient/predict and /analysis.
+        cls.random_forest_model = None
+        if getattr(settings, "load_random_forest", False):
+            rf_path = model_dir / "random_forest.pkl"
+            if rf_path.exists():
+                try:
+                    cls.random_forest_model = cls._load_joblib(rf_path, "random_forest")
+                except Exception as exc:
+                    logger.warning("Optional Random Forest loading skipped (%s).", exc)
 
         # ---- Drug summary DataFrame ------------------------------------
         cls.drug_summary = cls._load_joblib(
@@ -129,6 +137,7 @@ class ModelRegistry:
             logger.info("Loaded Disease Prediction Model: %d symptoms, %d diseases.", len(cls.disease_symptoms), len(cls.disease_metadata_list))
 
         cls._loaded = True
+        gc.collect()
         logger.info("ModelRegistry fully initialised.")
 
     @classmethod
