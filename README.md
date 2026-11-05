@@ -24,7 +24,7 @@ Patient Symptoms / Natural Language Input
                   ↓
        Retrieved Authoritative Medical Evidence Chunks
                   ↓
-  Modular LLM/SLM Reasoning (Ollama / OpenAI / Local Provider)
+  Modular LLM Reasoning (Google Gemini / Cloud Deployment / Local Fallback)
                   ↓
    Determine: ASK_FOLLOWUP vs FINAL_ASSESSMENT vs URGENT_ATTENTION
                   ↓
@@ -144,28 +144,25 @@ Frontend runs at: **http://localhost:5173**
 
 ---
 
-## LLM Configuration & Swapping
+## LLM Configuration (Google Gemini)
 
-The system uses a modular `LLMProvider` abstraction. Configured in `backend/.env`:
+The system is configured for cloud deployment using **Google Gemini** with an automatic deterministic local fallback for testing. Configured in `backend/.env`:
 
 ```env
-# Provider options: 'ollama', 'openai', 'gemini', or 'local'
-LLM_PROVIDER=ollama
-LLM_MODEL=llama3
-OLLAMA_BASE_URL=http://localhost:11434
-
-# For OpenAI / Gemini compatible API:
-OPENAI_API_KEY=your_key_here
-OPENAI_BASE_URL=https://api.openai.com/v1
+# LLM Configuration (Google Gemini API for Deployment)
+LLM_PROVIDER=gemini
+LLM_MODEL=gemini-1.5-flash
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
 
 # Embedding Model
 EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
 ```
 
-### Setting Up Ollama (Local Model)
-1. Install [Ollama](https://ollama.com).
-2. Pull a local model: `ollama pull llama3` or `ollama pull mistral`.
-3. Set `LLM_PROVIDER=ollama` and `LLM_MODEL=llama3` in `backend/.env`.
+### Setting Up Google Gemini
+1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/).
+2. Add your key to `backend/.env` under `GEMINI_API_KEY`.
+3. Set `LLM_PROVIDER=gemini` and choose your model (e.g. `gemini-1.5-flash` or `gemini-1.5-pro`).
 
 ---
 

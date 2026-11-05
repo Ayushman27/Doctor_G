@@ -6,6 +6,9 @@ Environment variables are read from .env file or system environment.
 from pathlib import Path
 from pydantic_settings import BaseSettings
 
+BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
+ENV_FILE_PATH = BACKEND_DIR / ".env"
+
 
 class Settings(BaseSettings):
     # CORS
@@ -21,18 +24,18 @@ class Settings(BaseSettings):
 
     # Model directory
     model_dir: Path = (
-        Path(__file__).resolve().parent.parent.parent
+        BACKEND_DIR
         / "models"
         / "patient_ai_models"
     )
 
-    # LLM Configuration
-    llm_provider: str = "ollama"
-    llm_model: str = "llama3"
-    ollama_base_url: str = "http://localhost:11434"
+    # LLM Configuration (Google Gemini for cloud deployment)
+    llm_provider: str = "gemini"
+    llm_model: str = "gemini-1.5-flash"
+    gemini_api_key: str = ""
+    gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta"
     openai_api_key: str = ""
     openai_base_url: str = "https://api.openai.com/v1"
-    gemini_api_key: str = ""
 
     # OpenFDA API Configuration
     openfda_api_key: str = "AlqBpoXw03ITN1J2zteR2zg17gCnbQERlGQT3ema"
@@ -47,7 +50,7 @@ class Settings(BaseSettings):
     session_timeout_minutes: int = 60
 
     class Config:
-        env_file = ".env"
+        env_file = (str(ENV_FILE_PATH), ".env")
         env_file_encoding = "utf-8"
         extra = "ignore"
 

@@ -41,7 +41,9 @@ class MedicalRetriever:
         if self._loaded:
             return True
 
-        if not FAISS_INDEX_PATH.exists() or not METADATA_PKL_PATH.exists():
+        numpy_path = VECTORSTORE_DIR / "embeddings.npy"
+        has_vectors = FAISS_INDEX_PATH.exists() or numpy_path.exists()
+        if not has_vectors or not METADATA_PKL_PATH.exists():
             logger.info("Vectorstore missing. Triggering auto-ingestion...")
             build_and_save_vectorstore()
 
@@ -64,7 +66,6 @@ class MedicalRetriever:
                 logger.warning("FAISS read_index failed (%s). Checking fallback matrix.", exc)
 
         # Fallback numpy matrix if FAISS is unavailable
-        numpy_path = VECTORSTORE_DIR / "embeddings.npy"
         if self.faiss_index is None and numpy_path.exists():
             try:
                 self.fallback_embeddings = np.load(str(numpy_path))
