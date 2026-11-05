@@ -2,12 +2,12 @@
  * Centralized API service layer.
  * All backend communication goes through this module — no scattered axios calls.
  *
- * Base URL: VITE_API_BASE_URL environment variable (default: http://localhost:8000)
+ * Base URL: VITE_API_BASE_URL environment variable (default: https://doctor-g-j7sp.onrender.com)
  */
 
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://doctor-g-j7sp.onrender.com'
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -117,4 +117,3 @@ export const getChatHistory = async (sessionId) => {
 }
 
 export default api
-

@@ -84,9 +84,20 @@ app = FastAPI(
 #  CORS — configurable via FRONTEND_ORIGIN environment variable        #
 # ------------------------------------------------------------------ #
 
+configured_origins = [o.strip() for o in settings.frontend_origin.split(",") if o.strip()]
+default_origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://localhost:4173",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:3000",
+]
+all_allowed_origins = list(dict.fromkeys(configured_origins + default_origins))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_origin],
+    allow_origins=all_allowed_origins,
+    allow_origin_regex=r"^https?:\/\/.*(vercel\.app|onrender\.com|netlify\.app|github\.io|localhost)(:\d+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -116,7 +127,6 @@ app.include_router(drugs.router, prefix="/api")
 app.include_router(patient.router, prefix="/api")
 app.include_router(disease.router, prefix="/api")
 app.include_router(chat.router, prefix="/api")
-
 
 
 # ------------------------------------------------------------------ #
